@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*{
+	margin: 0; 
+	padding: 0; 
+	box-sizing: border-box; 
+	font-family: 'Poppins', sans-serif; 
+	scroll-behavior: smooth;
+}
+body
+{
+   font-family: "Open Sans";
+color: white;
+display: flex;
+justify-content: center;
+min-height: 100vh;
+background: #555555;
+}
+img{
+ height: 20px; 
+ width: 20px;
+
+}
+.containar
+{
+	position:relative;
+	width: 320px;
+	height: 440px;
+	box-shadow: inset 5px 5px 5px rgba(0,0,0,0.05),
+	            inset -5px -5px 5px rgba(255,255,255,0.5),
+	            5px 5px 5px rgba(0,0,0,0.05),
+	            -5px -5px 5px rgba(255,255,255,0.5);
+	border-radius: 15px;
+	margin:31px;
+	top: 1vh;
+}
+.containar .contactInfo .contactForm .inputBox .bax
+{
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	right: 20px;
+	bottom: 20px;
+	background: #ebf5fc;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+	border-radius: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center; 
+	transition: 0.5s;
+}
+.containar .contactInfo .contactForm .inputBox:hover .bax
+{
+	transform: translateY(-50px);
+	box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+	background: linear-gradient(45deg, #b95ce4, #4f29cd);
+}
+.containar .contactInfo .contactForm .inputBox .bax
+{
+	padding: 2px;
+	text-align: center;
+	color: black;
+}
+.containar .contactInfo .contactForm .inputBox .bax
+{
+	position: absolute;
+	top: -10px;
+	right: 30px;
+	font-size: 8em;
+	color: rgba(0,0,0,0.02);
+	transition: 0.5s;
+	pointer-events: none;
+}
+.containar .contactInfo .contactForm .inputBox:hover .bax
+{
+	color: rgba(0,0,0,0.05);
+}
+.container .contactInfo .contactForm .inputBox .bax
+{
+	font-size: 1.8em;
+	color: #777;
+	z-index: 1;
+	transition: 0.5s;
+}
+.containar .contactInfo .contactForm .inputBox .bax
+{
+	font-size: 1em;
+	font-weight: 300;
+	color: #777;
+	z-index: 1;
+	transition: 0.5s;
+}
+.containar ..contactInfo .contactForm .inputBox:hover .bax,
+.containar ..contactInfo .contactForm .inputBox:hover .bax
+{
+	color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+section
+{
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	padding: 0 100px;
+	display: flex;
+	align-items:center;
+	background: #555555; 
+}
+section::before
+{
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 100px;
+	transform: translateY(-50%);
+	width: 500px;
+	height: 500px;
+	border-radius: 50%;
+	background: #ed325f;
+	transition: 1s;
+}
+section.active::before
+{
+	background: #21283a;
+	box-shadow: 0 0 0 1200px #1ede6d;
+}
+header
+{
+	position: absolute;
+	top: 0;
+	left:0;
+	width: 100%;
+	z-index: 1000;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px 100px; 
+}
+header .logo
+{
+	font-size: 1.5em;
+	color: white;
+	letter-spacing: 2px;
+	text-decoration: none;
+	font-weight: 600;
+	transition: 0.5s; 
+	transform-origin: right;
+}
+ header .toggle
+{
+		position: relative;
+		width: 30px;
+		height: 30px;
+		background: url(http://www.ecolifepro.com/images/menu-icon.png);
+		background-size: 30px;
+		background-repeat: no-repeat;
+		background-position: center;
+		cursor: pointer; 
+}
+header .toggle.active
+{
+		background: url(https://cdn.pixabay.com/photo/2016/10/10/01/49/x-1727490_960_720.png);
+		background-size: 25px;
+		background-repeat: no-repeat;
+		background-position: center;  
+}
+.menu
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+	padding-left: 100px;
+	transition: 0.5s;
+	z-index: 2;
+	visibility: hidden;
+	opacity: 0;
+}
+.banner.active .menu
+{
+	visibility: visible;
+	opacity: 1;
+}
+.menu li
+{
+	list-style: none;
+}
+.menu li a
+{
+	color: #08381b;
+	text-decoration: none;
+	font-size: 1.5em;
+	padding: 5px 10px;
+	margin: 5px 0;
+	display: inline-block;
+	transition: 0.2s ease-in-out;
+}
+.menu li a:hover
+{
+	letter-spacing: 1px;
+	background: white;
+	color: #161a23;
+}
+.banner.active .containar,
+.banner.active .contactInfo,
+.banner.active .bax,
+.banner.active .contactForm,
+.banner.active .logo,
+.banner.active h1
+{
+	transform: scale(0);
+	transform-origin: left;
+}
+
+
+
+
+
+.contact
+{
+	position: relative;
+	min-height: 100vh;
+	padding: 50px 100px;
+	left: 310px;
+	top: 20px;
+}
+.contact .content
+{
+	max-width: 800px;
+	text-align: center;
+}
+.contact .content h2
+{
+	font-size: 36px;
+	font-weight: 500;
+	color: #fff;
+}
+.contact .content p
+{
+	font-weight: 300;
+	columns: #fff;
+}
+.containar
+{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
+}
+.containar .contactInfo
+{
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+}
+.containar .contactInfo .bax
+{
+	position: relative;
+	padding: 20px 0;
+	display: flex;
+}
+.containar .contactInfo .bax .icon
+{
+	min-width: 30px;
+	height: 30px;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	font-size: 22px;
+}
+.containar .contactInfo .bax .text
+{
+	display: flex;
+	margin-left: 20px;
+	font-size: 16px;
+	color: #fff;
+	flex-direction: column;
+	font-weight: 300;
+}
+.containar .contactInfo .bax .text h3
+{
+	color: #ed325f;
+	font-weight: 500;
+}
+.contactForm
+{
+    width: 350px;
+    padding: 20px;
+	background:;
+}
+.contactForm h2
+{
+	font-size: 30px;
+	color: white;
+	font-weight: 500;
+}
+.contactForm .inputBox
+{
+    color: black;
+	position: relative;
+	width: 100%;
+	margin-top: 10px;
+}
+.contactForm .inputBox input,
+.contactForm .inputBox textarea
+{
+    background: none;
+    color: white;
+	width: 100%;
+	padding: 5px 0;
+	font-size: 16px;
+	margin:10px 0;
+	border: none;
+	border-bottom: 2px solid #333;
+	outline: none;
+	resize: none;
+}
+.contactForm .inputBox span
+{
+	position: absolute;
+	left: 0;
+	padding: 5px 0;
+	font-size: 16px;
+	margin:10px 0;
+	pointer-events: none;
+	transition: 0.10s
+	color:white;
+}
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span
+{
+	columns: #e91e63;
+	font-size: 12px;
+	transform:translateY(-20px);
+}
+.contactForm .inputBox input[type="submit"]
+{
+	width: 100px;
+	background: #ed325f;
+	border-radius: 50%;
+	color:#fff;
+	border:none;
+	cursor: pointer;
+	padding: 10px;
+	font-size: 18px;
+}
+@media only screen and (max-width: 991px)
+{
+	.elements
+	{
+		visibility: hidden;
+		opacity: 0;
+	}
+	header
+	{
+		padding: 20px 40px;
+	}
+	section
+	{
+		padding: 0px;
+	}
+	section::before
+	{
+		opacity: 0;
+	}
+	.banner.active .container
+	{
+		opacity: 0 !important;
+	}
+	.menu
+	{
+		align-items: center;
+		padding-left: 0;
+		transition: 0.5s;
+	}
+	.menu li a
+	{
+		color: white;
+	}
+.banner.active .logo
+{
+	transition: 0s;
+}
+	.contact
+	{
+		padding: 0px;
+	}
+	.containar
+	{
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        margin:50px;
+	}
+	.containar .contactInfo
+	{
+		margin-bottom: 40px;
+	}
+	.containar .contactInfo,
+	.contactForm
+	{
+		width: 100%;
+	}
+
+}
+   padding: 10px;
+         left: -325px;
+    top: 100px;
+    height: 800px;
+    width: 350px;
+    margin-bottom: 100px;
+    position: absolute;

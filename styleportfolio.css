@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+margin: 0; 
+padding:0; 
+box-sizing: border-box; 
+font-family: 'Poppins', sans-serif; 
+scroll-behavior: smooth;
+}
+body
+{
+font-family: "Open Sans";
+color: white;
+}
+section
+{
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	padding: 0 100px;
+	display: flex;
+	align-items:center;
+	background: #555555; 
+}
+section::before
+{
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 100px;
+	transform: translateY(-50%);
+	width: 500px;
+	height: 500px;
+	border-radius: 50%;
+	background: #ed325f;
+	transition: 1s;
+}
+section.active::before
+{
+	background: #21283a;
+	box-shadow: 0 0 0 1200px #1ede6d;
+}
+header
+{
+	position: absolute;
+	top: 0;
+	left:0;
+	width: 100%;
+	z-index: 1000;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px 100px; 
+}
+header .logo
+{
+	font-size: 1.5em;
+	color: white;
+	letter-spacing: 2px;
+	text-decoration: none;
+	font-weight: 600;
+	transition: 0.5s; 
+	transform-origin: right;
+}
+ header .toggle
+{
+		position: relative;
+		width: 30px;
+		height: 30px;
+		background: url(http://www.ecolifepro.com/images/menu-icon.png);
+		background-size: 30px;
+		background-repeat: no-repeat;
+		background-position: center;
+		cursor: pointer; 
+}
+header .toggle.active
+{
+		background: url(https://cdn.pixabay.com/photo/2016/10/10/01/49/x-1727490_960_720.png);
+		background-size: 25px;
+		background-repeat: no-repeat;
+		background-position: center;  
+}
+.men
+{
+	position: absolute;
+	z-index: 2;
+	bottom: 10;
+	right: 170px;
+	max-width: 360px;
+}
+.content
+{
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	transition: 0.5s;
+	transform-origin: right;
+}
+.content .contentbx
+{
+	position: relative;
+	max-width: 600px;
+}
+.content .contentbx h4
+{
+	font-weight: 400;
+	font-size: 1.5em;
+	letter-spacing: 2px
+	margin-bottom:10px;
+}
+.content .contentbx h2
+{
+	font-size: 4em;
+	line-height: 1em;
+	color: white; 
+}
+.content .contentbx h3
+{
+	font-weight: 300;
+	columns: white;
+	font-size: 2em;
+	line-height: 1.5em;
+}
+.content .contentbx p
+{
+	font-size: 1em;
+	margin: 10px 0 20px;
+	font-weight: 300;
+}
+.content .contentbx a
+{
+	display: inline-block;
+	color: white;
+	padding: 10px 20px;
+	margin-right: 10px;
+	margin-bottom: 10px; 
+	text-decoration: none;
+	font-weight: 500; 
+	background: #ed325f;
+	transition: 0.5s;
+	letter-spacing: 2px;
+}
+.content .contentbx a:last-child
+{
+	background: #1ede6d;
+	color: black;
+}
+.content .contentbx a:hover
+{
+	letter-spacing: 4px;
+	background: #1ede6d;
+	color: black;
+}
+.content .contentbx a:hover:last-child
+{
+	background: #ed325f;
+}
+.sci
+{
+	position: absolute;
+	bottom: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 2;
+	transition: 0.5s;
+	transform-origin: right;
+}
+.sci img
+{
+	height: 7.5vh;
+	filter: invert(1);
+	transform: scale(0.6);
+}
+.sci li
+{
+	list-style: none;
+	width: 50px;
+	height: 50px;
+	margin-right: 10px;
+}
+.sci li a
+{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 2px solid white;
+    border-radius: 50%;
+}
+.sci li:hover a
+{
+	background: white;
+}
+.banner.active .sci,
+.banner.active .content,
+.banner.active .logo
+{
+	transform: scale(0);
+	transform-origin: left;
+}
+.menu
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+	padding-left: 100px;
+	transition: 0.5s;
+	z-index: 2;
+	visibility: hidden;
+	opacity: 0;
+}
+.banner.active .menu
+{
+	visibility: visible;
+	opacity: 1;
+}
+.menu li
+{
+	list-style: none;
+}
+.menu li a
+{
+	color: #08381b;
+	text-decoration: none;
+	font-size: 1.5em;
+	padding: 5px 10px;
+	margin: 5px 0;
+	display: inline-block;
+	transition: 0.2s ease-in-out;
+}
+.menu li a:hover
+{
+	letter-spacing: 1px;
+	background: white;
+	color: #161a23;
+}
+@media only screen and (max-width: 991px)
+{
+	.elements
+	{
+		visibility: hidden;
+		opacity: 0;
+	}
+	header
+	{
+		padding: 20px 40px;
+	}
+	section
+	{
+		padding: 0 40px;
+	}
+	section::before
+	{
+		opacity: 0;
+	}
+	.content
+	{
+		margin: 50px 0;
+	}
+	.men
+	{
+		width: 100%;
+		right: 0px;
+		opacity: 8.3;
+		padding: 20px;
+	}
+	.banner.active .men
+	{
+		opacity: 0 !important;
+	}
+	.menu
+	{
+		align-items: center;
+		padding-left: 0;
+		transition: 0.5s;
+	}
+	.content .contentbx h2
+	{
+		font-size: 2.2em;
+		color: yellow;
+	}
+	.content .contentbx h4
+	{
+		color: red;
+	}
+	.content .contentbx p
+	{
+		color: black;
+		font-weight: bold;
+	}
+	.content .contentbx h3
+	{
+		font-size: 1.5em;
+		color: yellow;
+	}
+	.content .contentbx a
+	{
+		padding: 6px 15px;
+		margin-right: 5px;
+	}
+	.menu li a
+	{
+		color: white;
+	}
+	.banner.active .sci,
+.banner.active .content,
+.banner.active .logo,
+.banner.active .men
+{
+	transition: 0s;
+}
+}
